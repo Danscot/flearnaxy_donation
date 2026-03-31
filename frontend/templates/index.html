@@ -1,0 +1,166 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support Flearnaxy - Make a Donation</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <meta
+      name="description"
+      content="Help us build and maintain a powerful platform where students, teachers, and creators can learn, teach, and share knowledge."
+    />
+    <meta
+      name="keywords"
+      content="Flearnaxy donation, support education, donate to Flearnaxy, educational platform funding, online learning support"
+    />
+    <meta property="og:title" content="Support Flearnaxy - Make a Donation" />
+    <meta
+      property="og:description"
+      content="Help us build and maintain a powerful platform where students, teachers, and creators can learn, teach, and share knowledge."
+    />
+    <meta property="og:image" content="{% static 'donations.png' %}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'donations.png' %}" />
+  </head>
+  <body>
+    <!-- Starfield -->
+    <div class="starfield-container">
+      <canvas id="starfield"></canvas>
+    </div>
+
+    <!-- Orbs -->
+    <div class="donate-orbs">
+      <div class="donate-orb orb-1"></div>
+      <div class="donate-orb orb-2"></div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="donate-container">
+      <div class="donate-content">
+        <div class="donate-logo">
+          <img src="{% static 'donations.png' %}" alt="Flearnaxy Donations" />
+        </div>
+
+        <h1>Support Flearnaxy</h1>
+
+        <p class="donate-intro">
+          Help us build and maintain a powerful platform where students,
+          teachers, and creators can learn, teach, and share knowledge. Your
+          donation supports server infrastructure, platform development, and new
+          educational features.
+        </p>
+
+        <div class="donate-form">
+          <h2>Make a Donation</h2>
+
+          <div class="donate-donor-info">
+            <div class="donate-field">
+              <label
+                >Name
+                <span style="opacity: 0.6; font-size: 12px"
+                  >(optional)</span
+                ></label
+              >
+              <input type="text" id="donorName" placeholder="Your name" />
+            </div>
+            <div class="donate-field">
+              <label
+                >Email
+                <span style="opacity: 0.6; font-size: 12px"
+                  >(optional)</span
+                ></label
+              >
+              <input
+                type="email"
+                id="donorEmail"
+                placeholder="your@email.com"
+              />
+            </div>
+          </div>
+
+          <div class="donate-amounts" id="presetAmounts">
+            <button class="donate-amount" data-amount="3000">3,000 XAF</button>
+            <button class="donate-amount" data-amount="12000">
+              12,000 XAF
+            </button>
+            <button class="donate-amount" data-amount="30000">
+              30,000 XAF
+            </button>
+            <button class="donate-amount" data-amount="60000">
+              60,000 XAF
+            </button>
+          </div>
+
+
+          <div class="donate-custom">
+
+            <input
+              type="tel"
+              id="phoneNumber"
+              placeholder="Your phone number (e.g., 67XXXXXXX)"
+              required
+            />
+
+          </div>
+
+          <div class="donate-custom">
+            <label>Custom amount (min. 200 XAF)</label>
+            <input
+              type="number"
+              id="customAmount"
+              placeholder="Custom amount"
+              min="200"
+            />
+            <span class="donate-error" id="amountError" style="display: none"
+              >Minimum donation is 200 XAF</span
+            >
+          </div>
+
+          <button class="donate-btn" id="donateNowBtn" disabled>
+            Donate Now
+          </button>
+
+          <div class="donate-success" id="successMessage">
+            <span>Thank you for your support!</span>
+          </div>
+        </div>
+
+        <div class="donate-info">
+          <h3>How Your Donation Helps</h3>
+          <ul>
+            <li>Server infrastructure and hosting</li>
+            <li>Platform development and new features</li>
+            <li>Learning tools and resources</li>
+            <li>Video and streaming systems</li>
+            <li>Community features and support</li>
+            <li>Security and data protection</li>
+          </ul>
+        </div>
+
+        <div class="donate-transparency">
+          <h3>Our Commitment</h3>
+          <p>
+            Donations go directly into platform development and infrastructure.
+            A small portion covers transaction fees and payment processing. We
+            provide regular updates on development progress and maintain open
+            communication about how funds are used.
+          </p>
+        </div>
+
+        <div class="donate-contact">
+          <h3>For Personal Talks & Investments</h3>
+          <p>
+            Contact us at
+            <a href="mailto:flearnaxy@gmail.com">flearnaxy@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+
+</html>
